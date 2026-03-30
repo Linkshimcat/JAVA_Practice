@@ -1,6 +1,5 @@
 import java.util.Scanner; //Scanner 모듈 불러오기
 
-
 public class Constant_1211 {
     public static void main(String[] args) {
 
