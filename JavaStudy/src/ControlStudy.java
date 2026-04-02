@@ -1,5 +1,6 @@
 public class ControlStudy {
     public static void main(String[] args) {
+        /*
         //조건문
         int score = 85;
         if(score >= 60) {
@@ -28,6 +29,59 @@ public class ControlStudy {
             System.out.println("F");
         }
 
+         */
+
+        /*
+        // Switch문
+        int day = 3;
+        switch (day) {
+            case 1: // (1 = 3은 같지 않음) 동등 비교
+                System.out.println("월요일");
+                break;
+            case 2:
+                System.out.println("화요일");
+                break;
+            case 3:
+                System.out.println("수요일");
+                break; // 멈춤
+            default: // else if랑 비슷함. (어짜피 default는 마지막에
+                System.out.println("기타");
+          */
+
+
+        /*
+        int day = 3;
+        if (day == 1) {
+            System.out.println("월요일");
+        } else if (day == 2) {
+            System.out.println("화요일");
+        } else  {
+            System.out.println("기타");
+        }
+         */
+
+
+        for(int row = 1; row <=5; row++) {
+            for (int col = 5; col>= row; col--) {
+                System.out.print("*");
+
+            }
+            System.out.println();
+        }
+
+        //반대
+        for(int row = 1; row <=5; row++) {
+            for (int col = 1; col<= row; col++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            //출력 결과
+            //1
+            //1 2
+            //1 2 3
+            //1 2 3 4
+            //1 2 3 4 5
+        }
 
     }
 }
