@@ -1,6 +1,7 @@
-public class cote {
-    public String solution(String my_string, int k) {
-        String answer = "";
+class Solution {
+    public int solution(String binomial) {
+        int answer = 0;
+
         return answer;
     }
 }
