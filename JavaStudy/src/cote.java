@@ -10,7 +10,7 @@ import java.util.Scanner;
 //    }
 //}
 
-//    (코테 double -> int 강제형 변환 문제)
+//   (코테 double -> int 강제형 변환 문제)
 //    class Solution {
 //    public int solution(double flo) {
 //        int answer = 0;
