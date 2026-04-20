@@ -68,30 +68,97 @@ public class ArrayDemo {
 //            }
 //        }
 
-        // 1) 스캐너로 배열의 크기를 입력 받고
-        Scanner sc = new Scanner(System.in);
-        System.out.print("배열의 크기를 입력하세요: ");
-        int size = sc.nextInt();
-        // 2) 그 사이즈 만큼 배열을 만들어 주고
-        int[] numsarry = new int[size];
+//        // 1) 스캐너로 배열의 크기를 입력 받고
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("배열의 크기를 입력하세요: ");
+//        int size = sc.nextInt();
+//        // 2) 그 사이즈 만큼 배열을 만들어 주고
+//        int[] numsarry = new int[size];
+//
+//        // 3) 배열의 크기만큼 숫자를 입력받게 해서 모두 채우고
+//        for (int i = 0; i<numsarry.length; i++) {
+//            System.out.print((i+1) + "번째 숫자 입력: ");
+//            numsarry[i] = sc.nextInt();
+//        }
+//
+//        // 4) 배열의 모든 내용을 출력 (가급적 for-each 사용)
+//        for (int n : numsarry) {
+//            System.out.println(n);
+//        }
+//
+//
+//
+//        //배열의 크기는 절대. 변경할 수 없다.
+//        int[] x = new int[5];
+//        // x.length = 10 오류 뜸
+//        x = new int[10]; //이건 원래 있던 new int[5]를 10으로 바꾸는 것이 아닌, 새로운 배열 10을 생성함.
 
-        // 3) 배열의 크기만큼 숫자를 입력받게 해서 모두 채우고
-        for (int i = 0; i<numsarry.length; i++) {
-            System.out.print((i+1) + "번째 숫자 입력: ");
-            numsarry[i] = sc.nextInt();
+           // 복습
+//         double[] dArr = new double[3];
+//         dArr[0] = 1.0;
+//         System.out.println(dArr[0]);
+//         System.out.println(dArr.length);
+//         System.out.println(dArr.length-1);
+
+//        String[] strs = new String[3]; // 참조형은 기본값이 null로 지정.
+//        strs[0] = "Hello";
+//        strs[1] = "World~";
+//        strs[2] = "Mirim Meister High School";
+//        System.out.println(strs[1]);
+
+
+//        // # 2차원 배열
+//        int[][] a;
+//        a = new int[2][3];
+//        // 1행
+//        a[0][0] = 1; //1행 - 1열
+//        a[0][1] = 2; //1행 - 2열
+//        a[0][2] = 3; //1행 - 3열
+//        System.out.println(a.length); // 행의 개수 => 2개
+//        System.out.println(a[0].length); // 열의 개수 => 3
+          // 2행
+//        a[1][0] = 4;
+//        a[1][1] = 5;
+//        a[1][2] = 6;
+//
+//        // 행과 열 값 알아보기
+//        System.out.println(a[0][0]);
+//        System.out.println(a[0][1]);
+//        System.out.println(a[0][2]);
+//        System.out.println(a[1][0]);
+//        System.out.println(a[1][1]);
+//        System.out.println(a[1][2]);
+
+
+        //# 반복문 돌면서 모든 요소 출력하기
+
+//        for (int i = 0; i<a.length; i++) {
+//            // 열 반복
+//            for (int j = 0; j<a[0].length; j++) {
+//                System.out.print(a[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+
+
+
+        // 이중 반복문 사용
+        int[][] a;
+        a = new int[3][3];
+        int b = 0;
+
+        for (int i = 0; i<a.length; i++) { //행 반복
+
+            // 열 반복
+            for (int j = 0; j<a[0].length; j++) {
+                b++;
+                a[i][j] = b;
+                System.out.print(a[i][j] + "\t");
+            }
+            System.out.println();
         }
 
-        // 4) 배열의 모든 내용을 출력 (가급적 for-each 사용)
-        for (int n : numsarry) {
-            System.out.println(n);
-        }
 
-
-
-        //배열의 크기는 절대. 변경할 수 없다.
-        int[] x = new int[5];
-        // x.length = 10 오류 뜸
-        x = new int[10]; //이건 원래 있던 new int[5]를 10으로 바꾸는 것이 아닌, 새로운 배열 10을 생성함.
 
 
 
