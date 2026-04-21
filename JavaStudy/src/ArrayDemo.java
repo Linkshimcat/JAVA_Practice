@@ -142,27 +142,89 @@ public class ArrayDemo {
 
 
 
-        // 이중 반복문 사용
-        int[][] a;
-        a = new int[3][3];
-        int b = 0;
+//        // 이중 반복문 사용
+//        int[][] a;
+//        a = new int[3][3];
+//
+//        for (int i = 0; i<a.length; i++) { //행 반복
+//
+//            // 열 반복
+//            for (int j = 0; j<a[0].length; j++) { //열 반복
+//                a[i][j] = (i*3  + j+1);
+//                System.out.print(a[i][j] + "\t");
+//            }
+//
+//            System.out.println();
+//        }
 
-        for (int i = 0; i<a.length; i++) { //행 반복
 
-            // 열 반복
-            for (int j = 0; j<a[0].length; j++) {
-                b++;
-                a[i][j] = b;
-                System.out.print(a[i][j] + "\t");
+//        // Q) 어떤 이차원 배열이 정사각 행렬(square matrix)인지 확인하는 코드
+//        int[][] mat = new int[3][3]; // 정사각형 true
+//        mat[0] = new int [3];
+//        mat[1] = new int [2];
+//        mat[2] = new int [1];
+
+
+//
+//        boolean issquare=true;
+//
+//        for(int i=0; i<mat.length; i++) {
+//            if (mat.length != mat[i].length) {
+//                issquare = false;
+//                break;
+//            }
+//        }
+//        System.out.println(issquare);
+
+
+//        // 쉬운 버전) 조건문으로 검사 하나 끝
+//        if (mat.length != mat[0].length) { // mat.length은 (행), mat[0].length은 (열)
+//            issquare=false;
+//        }
+//        System.out.println(issquare); // true or false
+
+
+
+            // jagged 열 확인문제
+//        int[][] mat = new int[3][4];
+//
+//        boolean isjagged = true;
+//        mat[0] = new int[3];
+//        mat[1] = new int[2];
+//        mat[2] = new int[1];
+//
+//        for(int i = 0; i < mat.length; i++) {
+//            if (mat[0].length !=  mat[i].length) {
+//                isjagged =  false;
+//                break;
+//
+//            }
+//        }
+//        System.out.print(isjagged);
+
+
+        // 어떤 행렬이 단의 행렬(identity)인지를 확인하는 코드
+        int[][] mat = new int[3][3];
+        mat[0] = new int[]{1, 0, 0};
+        mat[1] = new int[]{0, 1, 0};
+        mat[2] = new int[]{1, 0, 1};
+        boolean isIdentity = true;
+
+        for (int i = 0; i < mat.length; i++) {
+            for (int j = 0; j < mat[i].length; j++) {
+                if (i == j && mat[i][j] != 1) {
+                    // 주대각성분인데, 1이 아니면
+                    isIdentity = false;
+                    break;
+                }
+                // 주대각성분이 아닌데 0이 아니면,
+                else if (i != j && mat[i][j] != 0) {
+                    isIdentity = false;
+                    break;
+                }
             }
-            System.out.println();
         }
-
-
-
-
-
-
+        System.out.print(isIdentity);
 
 
     }
