@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class ControlStudy {
     public static void main(String[] args) {
         /*
@@ -61,27 +62,46 @@ public class ControlStudy {
          */
 
 
-        for(int row = 1; row <=5; row++) {
-            for (int col = 5; col>= row; col--) {
-                System.out.print("*");
+//        for(int row = 1; row <=5; row++) {
+//            for (int col = 5; col>= row; col--) {
+//                System.out.print("*");
+//
+//            }
+//            System.out.println();
+//        }
+//
+//        //반대
+//        for(int row = 1; row <=5; row++) {
+//            for (int col = 1; col<= row; col++) {
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//            //출력 결과
+//            //1
+//            //1 2
+//            //1 2 3
+//            //1 2 3 4
+//            //1 2 3 4 5
 
-            }
-            System.out.println();
+
+
+        // 월의 마지막 일 구하는 문제
+        Scanner sc = new Scanner(System.in);
+        System.out.print("달을 입력하세요:");
+        int Month = sc.nextInt();
+
+        switch (Month) {
+            case 1, 3, 5, 7, 8, 10, 12 :  System.out.print(Month + "월의 마지막은 31일 입니다.");
+                break;
+            case 4, 6, 9, 11 :  System.out.print(Month + "월의 마지막은 30일 입니다.");
+                break;
+
+            default :  System.out.print(Month + "월의 마지막은 28일 입니다."); // else와 같은 역할을 함
+                break;
+
         }
+        sc.close();
 
-        //반대
-        for(int row = 1; row <=5; row++) {
-            for (int col = 1; col<= row; col++) {
-                System.out.print("*");
-            }
-            System.out.println();
-            //출력 결과
-            //1
-            //1 2
-            //1 2 3
-            //1 2 3 4
-            //1 2 3 4 5
         }
 
     }
-}
